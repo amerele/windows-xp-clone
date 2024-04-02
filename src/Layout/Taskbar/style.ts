@@ -25,24 +25,32 @@ export const StyledTaskbar = styled(Box)`
   display: flex;
   height: 6px;
   align-items: center;
-  &:div {
-    color: red;
-  }
+  justify-content: space-between;
 `;
 
-// Adiciona estilos para os ícones na barra de tarefas
-export const TaskbarIcon = styled.div`
-  width: 40px; /* Largura dos ícones */
-  height: 100%; /* Altura igual à altura da barra de tarefas */
+export const TaskbarLeft = styled(Box)`
   display: flex;
-  justify-content: center;
   align-items: center;
-  cursor: pointer; /* Altera o cursor para um indicador de clique */
-`;
-
-// Adiciona estilos para o texto (por exemplo, o relógio) na barra de tarefas
-export const TaskbarText = styled.span`
-  margin: 0 12px; /* Espaçamento à esquerda e à direita */
-  font-family: Arial, sans-serif; /* Fonte semelhante à usada no Windows XP */
-  font-size: 12px; /* Tamanho da fonte */
+  background: linear-gradient(
+    rgb(12, 89, 185) 1%,
+    rgb(19, 158, 233) 6%,
+    rgb(24, 181, 242) 10%,
+    rgb(19, 155, 235) 14%,
+    rgb(18, 144, 232) 19%,
+    rgb(13, 141, 234) 63%,
+    rgb(13, 159, 241) 81%,
+    rgb(15, 158, 237) 88%,
+    rgb(17, 155, 233) 91%,
+    rgb(19, 146, 226) 94%,
+    rgb(19, 126, 215) 97%,
+    rgb(9, 91, 201) 100%
+  );
+  border-left: 1px solid rgb(16, 66, 175);
+  box-shadow: rgb(24, 187, 255) 1px 0px 1px inset;
+  padding: 0 10px;
+  width: 90px;
+  height: 30px;
+  font-size: 11px;
+  font-weight: lighter;
+  text-shadow: none;
 `;
