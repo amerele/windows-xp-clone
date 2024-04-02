@@ -1,16 +1,16 @@
-import { Box } from "@chakra-ui/react";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {AppIcon} from "../AppIcon";
+import { WindowAppGrid } from "./stye";
 
 interface IProps {
   Apps: TApp[];
 }
 export const DesktopAppGrid: React.FC<IProps> = ({ Apps }) => {
   return (
-    <Box>
+    <WindowAppGrid>
       {Apps?.map((App: TApp) => (
         <AppIcon name={App.name}/>
       ))}
-    </Box>
+    </WindowAppGrid>
   );
 };

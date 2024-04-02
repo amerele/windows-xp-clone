@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box, Image } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 export const StyledAppIcon = styled(Box)`
   display: flex;
