@@ -2,13 +2,21 @@ import * as React from "react";
 import { StyledAppIcon } from "./style";
 import { Image, Text } from "@chakra-ui/react";
 
-export const AppIcon: React.FC<TApp> = ({ name, ref }) => {
+interface IProps {
+  App: TApp;
+}
+export const AppIcon: React.FC<IProps> = ({App}) => {
+  const onclick = React.useCallback(()=>{
+    if(App.link){
+      window.open(App.link, '_blank');
+    }
+  },[App.link])
   return (
-    <StyledAppIcon>
+    <StyledAppIcon onDoubleClick={onclick} tabIndex={0}>
       <Image
-        src={`src/assets/${name.toLowerCase()}.${ref ? ref : "png"}`}
+        src={`src/assets/${App.name.toLowerCase()}.${App.ref ? App.ref : "png"}`}
       ></Image>
-      <Text>{name}</Text>
+      <Text>{App.name}</Text>
     </StyledAppIcon>
   );
 };

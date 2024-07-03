@@ -6,7 +6,7 @@ import StartUp from "../StartUp";
 
 const Desktop = () => {
   const [openApps, setOpenApps] = useState<TApp[]>(AppList);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const turnOn = useCallback(() => {
     setTimeout(() => {

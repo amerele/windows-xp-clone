@@ -10,6 +10,7 @@ export const StyledAppIcon = styled(Box)`
   width: 64px;
   height: 64px;
   color: #fff;
+  padding: 3px 4px;
 
   &:hover {
     background-color: #ffffff40;
@@ -25,5 +26,9 @@ export const StyledAppIcon = styled(Box)`
     margin-top: 6px;
     text-shadow: black 1px 1px 2px;
     font-size: 15px;
+  }
+  &:focus {
+    background-color: #ffffff60;
+    border: 1px solid #ffffff80;
   }
 `;

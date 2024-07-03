@@ -9,7 +9,7 @@ export const DesktopAppGrid: React.FC<IProps> = ({ Apps }) => {
   return (
     <WindowAppGrid>
       {Apps?.map((App: TApp) => (
-        <AppIcon name={App.name}/>
+        <AppIcon App={App}/>
       ))}
     </WindowAppGrid>
   );
